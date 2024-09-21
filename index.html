@@ -26,12 +26,16 @@
   font-style: normal;
 }
 
-
 </style>
+
+
+<!-- Mobile First with sm 
+Tab with md -->
+
 </head>
 <body class="bg-[#252b42] mont-400">
       <!-- <p> Shree ganeshay Namah</p> -->
-    <nav class="text-white flex justify-between my-5 px-36">
+    <nav class="text-white flex justify-between my-5 px-36 hidden lg:flex">
         <!-- Left Section -->
         <div class="flex flex-1 gap-x-10 items-center"> 
             <div>
@@ -54,9 +58,33 @@
         </div>
     </nav>
 
-    <section class="flex ">
+    <nav class="lg:hidden">
+        <div class="flex flex-1 justify-between mx-4 my-2 items-center text-white"> 
+            <div>
+                <p class="text-2xl">GDG VBSPU</p>
+            </div>
+            <div class="flex flex-col gap-y-2 cursor-pointer" id="hamburger">
+                    <div class="bg-white p-[0.5] h-[2px] w-12"></div>
+                    <div class="bg-white p-[0.5] h-[2px] w-12"></div>
+                    <div class="bg-white p-[0.5] h-[2px] w-12"></div>
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-col gap-y-4 justify-center items-center text-white hidden" id="navlist">
+                <p>Home</p>
+                <p>About</p>
+                <p>Services</p>
+                <p>Sign In</p>
+                <div class="bg-[#23A6F0] px-2 border-2 rounded-md w-fit text-white">
+                    <p>Sign Up -></p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flex flex-col lg:flex-row h-[80vh] items-center">
 <!-- Left Section -->
-        <div class="w-[50%] px-32 pt-24">
+        <div class="w-[80%] lg:w-[50%] lg:px-32 px-10 mt-12 lg:mt-0">
                 <div class="flex flex-col gap-y-7">
                     <h1 class="text-xl text-[#23A6F0] ">Welcome to GDG VBSPU</h1>
                     <p class="text-5xl text-white mont-800">Best Learning Opportunities</p>
@@ -74,8 +102,8 @@
         </div>
               
 <!--  Right Section -->
-        <div class="w-[50%] h-[80%]  flex justify-center items-center">
-                <img src="./girls_images.svg" alt="Girls Images" class="h-[60%] w-[60%]">
+        <div class="w-[80%] lg:w-[50%] h-[80%]  flex justify-center items-center">
+                <img src="./girls_images.svg" alt="Girls Images" class=" h-[80%] lg:h-[60%] w-[80%] lg:w-[60%]">
 
         </div>
 
@@ -83,4 +111,33 @@
     </section>
 
 </body>
+<script>
+
+
+var hamburger_button = document.getElementById("hamburger")
+
+var navlist = document.getElementById("navlist")
+
+var flag = false
+
+
+
+hamburger_button.addEventListener("click",()=>
+{
+    if(flag == false)
+        {
+            navlist.style.display = 'flex'
+            flag = true
+        }
+    else{
+        navlist.style.display = 'none'
+        flag = false
+    } 
+})
+
+
+
+
+
+</script>
 </html>
