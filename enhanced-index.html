@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced GDG Website</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Montserrat Font Styles */
+      .mont-400 {
+        font-family: "Montserrat", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .mont-800 {
+        font-family: "Montserrat", system-ui;
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      /* Keyframe for the bounce animation - only happens once */
+      @keyframes bounce-once {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .animate-bounce-once {
+        animation: bounce-once 1s ease-in-out;
+      }
+
+      /* Fade-in animation */
+      .animate-fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#1d2330] mont-400">
+    <nav class="text-white flex justify-between my-5 px-36">
+      <!-- Left Section -->
+      <div class="flex flex-1 gap-x-10 items-center">
+        <div>
+          <p class="text-2xl font-bold">GDG VBSPU</p>
+        </div>
+        <div>
+          <div class="flex gap-x-10">
+            <a href="#" class="hover:text-[#23A6F0]">Home</a>
+            <a href="#" class="hover:text-[#23A6F0]">About</a>
+            <a href="#" class="hover:text-[#23A6F0]">Services</a>
+          </div>
+        </div>
+      </div>
+      <!-- Right Section -->
+      <div class="flex gap-x-4">
+        <div class="px-4 py-2 border-2 rounded-md hover:bg-white hover:text-[#23A6F0] transition-all">
+            <a href="#" class=" hover:text-[#23A6F0]">Sign In</a>
+          </div>
+        
+        <div class="bg-[#23A6F0] px-4 py-2 border-2 rounded-md hover:bg-white hover:text-[#23A6F0] transition-all">
+          <p>Sign Up</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex bg-gradient-to-r from-[#252b42] to-[#1a2030]">
+      <!-- Left Section -->
+      <div class="w-[50%] px-32 pt-24">
+        <div class="flex flex-col gap-y-7">
+          <h1 class="text-xl text-[#23A6F0] animate-fade-in">Welcome to GDG VBSPU</h1>
+          <p class="text-5xl text-white mont-800 animate-fade-in">
+            Best Learning Opportunities
+          </p>
+          <p class="text-white animate-fade-in">
+            Discover the future with cutting-edge technology.
+          </p>
+        </div>
+        <div class="flex gap-x-5 mt-4">
+          <div class="bg-[#23A6F0] px-4 py-2 border-2 rounded-md text-white w-fit hover:bg-white hover:text-[#23A6F0] transition-all animate-fade-in">
+            <p>Get Quote Now</p>
+          </div>
+          <div class="border-2 rounded-md px-4 py-2 text-[#23A6F0] border-[#23A6F0] hover:bg-[#23A6F0] hover:text-white transition-all animate-fade-in">
+            <p>Learn More</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="w-[50%] h-[80%] flex justify-center items-center relative">
+        <img
+          src="./girls_images.svg"
+          alt="Girls Images"
+          class="h-[60%] w-[60%] animate-fade-in"
+        />
+        <div class="absolute bg-white bg-opacity-10 w-[300px] h-[300px] rounded-full blur-3xl top-10 left-10"></div>
+        <div class="absolute bg-[#23A6F0] bg-opacity-20 w-[200px] h-[200px] rounded-full blur-3xl bottom-10 right-10"></div>
+      </div>
+    </section>
+
+    <!-- New Section for Features or Services with Scroll Animation -->
+    <section class="bg-[#1d2330] py-16 px-36">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl text-white mont-800 animate-fade-in">Our Services</h2>
+        <p class="text-white animate-fade-in">
+          Explore our wide range of services designed to enhance your learning
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-10">
+        <div class="bg-white rounded-lg shadow-lg p-6 transition-all animate-fade-in">
+          <img src="./service1.svg" alt="Service 1" class="h-[50px] mb-4" />
+          <h3 class="text-xl mont-800 mb-2">Service 1</h3>
+          <p class="text-[#252b42]">
+            Learn how to develop world-class web applications with us.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 transition-all animate-fade-in">
+          <img src="./service2.svg" alt="Service 2" class="h-[50px] mb-4" />
+          <h3 class="text-xl mont-800 mb-2">Service 2</h3>
+          <p class="text-[#252b42]">
+            Master cloud technologies with hands-on sessions.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 transition-all animate-fade-in">
+          <img src="./service3.svg" alt="Service 3" class="h-[50px] mb-4" />
+          <h3 class="text-xl mont-800 mb-2">Service 3</h3>
+          <p class="text-[#252b42]">
+            Become an expert in mobile app development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#252b42] py-8 px-36 text-white">
+      <div class="flex justify-between">
+        <div>
+          <h4 class="text-2xl mb-4">GDG VBSPU</h4>
+          <p>© 2024 GDG VBSPU. All rights reserved.</p>
+        </div>
+        <div class="flex gap-x-4">
+          <a href="#"><img src="./facebook-icon.svg" alt="Facebook" class="h-6"/></a>
+          <a href="#"><img src="./twitter-icon.svg" alt="Twitter" class="h-6"/></a>
+          <a href="#"><img src="./instagram-icon.svg" alt="Instagram" class="h-6"/></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Function to apply animations when scrolling into view
+      const animatedElements = document.querySelectorAll(".animate-fade-in");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      });
+
+      animatedElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
